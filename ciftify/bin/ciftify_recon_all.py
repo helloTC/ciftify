@@ -492,7 +492,7 @@ def define_expected_labels(fs_version):
     ''' figures out labels according to freesurfer version run '''
     expected_labels = ['aparc', 'aparc.a2009s', 'BA', 'aparc.DKTatlas',
             'BA_exvivo']
-    if fs_version == 'v6.0.0':
+    if 'v6.' in fs_version:
         expected_labels.remove('BA')
     if 'v5.' in fs_version:
         expected_labels.remove('aparc.DKTatlas')
