@@ -591,7 +591,7 @@ def convert_freesurfer_mgz(image_name,  T1w_nii, hcp_templates,
                 image_nii, '-drop-unused-labels'], dryrun=DRYRUN)
 
 def resample_freesurfer_mgz(T1w_nii, freesurfer_mgz, image_nii):
-    run(['mri_convert', '-rt', 'nearest', '-rl', T1w_nii, freesurfer_mgz,
+    run(['mri_convert', '-rt', 'nearest', '-rl', '-nc', T1w_nii, freesurfer_mgz,
             image_nii], dryrun=DRYRUN)
 
 ## Step 1.1: Creating Brainmask from wmparc #######################
